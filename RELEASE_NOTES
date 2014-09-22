@@ -6,6 +6,7 @@ This release includes:
 * initial support for generic methods (non toolkit-specific, experimental)
 * xdg-settings utility, a script to get various settings from the desktop
   environment
+* initial support for KF5 in xdg-open
 
 
 Release notes for xdg-utils 1.0.2

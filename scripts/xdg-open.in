@@ -81,8 +81,12 @@ open_darwin()
 
 open_kde()
 {
+    # check against KDE4 version of kde-open first, because it seems to work in plasma5
+    # don't know if kde-open5 works in KDE4
     if kde-open -v 2>/dev/null 1>&2; then
         kde-open "$1"
+    elif kde-open5 -v 2>/dev/null 1>&2; then
+        kde-open5 "$1"
     else
         if [ x"$KDE_SESSION_VERSION" = x"4" ]; then
             kfmclient openURL "$1"
